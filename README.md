@@ -1,2 +1,2 @@
-# persenal-summary
+# personal-summary
 学习总计
