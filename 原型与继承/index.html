@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>继承</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//借助构造函数实现继承
+		function Parent (){
+			this.name = 'parent'
+		}
+		function Child (){
+			Parent.call(this)
+			this.type = 'child'
+		}
+		Parent.prototype.say = function(){
+			console.log('say hi')
+		}
+		var child = new Child()
+		child.say //
+
+
+        // 通过原型链实现继承
+        function Parent1 (){
+        	this.name = 'parent'
+        }
+        function Child1 (){
+        	this.type = 'child'
+        }
+        Child1.prototype = new Parent1()
+        var child1 = new Child1()
+	</script>
+</body>
+</html>
